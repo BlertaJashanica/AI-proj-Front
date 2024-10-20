@@ -1,24 +1,11 @@
 textarea {
     width: 100%;
-    resize: vertical;  /* Gebruiker kan zelf de hoogte aanpassen */
+    resize: vertical; /* Gebruiker kan de hoogte aanpassen */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 16px;
-  }
-  
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  button:hover {
-    background-color: #218838;
+    min-height: 300px; /* Zorgt voor consistente hoogte */
   }
   

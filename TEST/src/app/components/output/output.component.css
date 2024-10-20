@@ -1,11 +1,12 @@
 textarea {
     width: 100%;
-    resize: none;  /* Geen aanpassing van hoogte mogelijk */
+    resize: vertical; /* Laat gebruiker de hoogte aanpassen */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     background-color: #f8f9fa;
     font-size: 16px;
+    min-height: 300px; /* Zelfde hoogte als input veld */
   }
   
