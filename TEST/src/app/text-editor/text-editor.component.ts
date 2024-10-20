@@ -28,7 +28,7 @@ export class TextEditorComponent {
   }
 
   generateText() {
-    const result = `Gegenereerde tekst voor ${this.selectedMedium}: ${this.inputText}`;
+    const result = `${this.selectedMedium} ${this.inputText}`;
     this.textGenerated.emit(result);
   }
 
