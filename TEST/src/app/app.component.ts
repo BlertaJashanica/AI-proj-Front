@@ -13,6 +13,9 @@ import {TextEditorComponent} from './text-editor/text-editor.component'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  logoUrl: string = 'https://seeklogo.com/images/S/stad-antwerpen-logo-F659E48C62-seeklogo.com.png';
+
   outputText: string = '';
 
   onTextGenerated(text: string) {
