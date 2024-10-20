@@ -12,14 +12,12 @@ import { Input, Output, EventEmitter } from '@angular/core';
 })
 export class MediumSelectComponent {
 
-  selectedMedium: string = '';
-  media: string[] = ['Website', 'Blog', 'Nieuwsbrief'];
+  @Input() selectedMedium: string = 'Website';
+  @Output() selectedMediumChange = new EventEmitter<string>();
+  @Input() media: string[] = [];
 
-  @Output() mediumSelected = new EventEmitter<string>();
-
-  // Emit het geselecteerde medium
-  onMediumChange() {
-    this.mediumSelected.emit(this.selectedMedium);
+  onSelectChange(value: string): void {
+    this.selectedMediumChange.emit(value);
   }
 
 }
