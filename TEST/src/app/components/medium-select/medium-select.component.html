@@ -1,0 +1,7 @@
+<div class="controls">
+    <label for="medium-select" class="label">Selecteer Medium:</label>
+    <select id="medium-select" class="medium-select" [(ngModel)]="selectedMedium">
+      <option *ngFor="let medium of media" [value]="medium">{{ medium }}</option>
+    </select>
+  </div>
+  

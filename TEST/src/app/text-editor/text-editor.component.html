@@ -1,0 +1,22 @@
+<div class="container text-editor">
+    <h2 class="title">Slimme Schrijftool</h2>
+   
+    <app-text-input 
+      [(inputText)]="inputText">
+    </app-text-input>
+  
+    
+    <app-medium-select 
+      [(selectedMedium)]="selectedMedium" 
+      [media]="media">
+    </app-medium-select>
+  
+    <button class="generate-btn" (click)="generateText()">Genereer Tekst</button>
+  
+    <app-output 
+      *ngIf="outputText"
+      [outputText]="outputText" 
+      (finalized)="handleFinalize()">
+    </app-output>
+  </div>
+  
