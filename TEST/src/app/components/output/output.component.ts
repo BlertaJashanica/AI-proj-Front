@@ -11,11 +11,10 @@ import { Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './output.component.css'
 })
 export class OutputComponent {
-  @Input() outputText: string = '';
+  @Input() outputText: string = '';  // Ontvangt de gegenereerde tekst van de parent
   @Output() finalized = new EventEmitter<void>();
 
-  finalize(): void {
-    this.finalized.emit();
+  finalizeText() {
+    this.finalized.emit();  // Meldt dat de tekst is afgerond
   }
-
 }

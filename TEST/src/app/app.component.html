@@ -1,4 +1,21 @@
-<div class="app-container">
-  <h1>{{ title }}</h1>
-  <app-text-editor></app-text-editor>
+<div class="container">
+  <h2 class="title">Slimme Schrijftool</h2>
+  
+  <div class="content">
+    <!-- Linker kolom: Text Editor -->
+    <div class="left-column">
+      <app-text-editor (textGenerated)="onTextGenerated($event)"></app-text-editor>
+    </div>
+
+    <!-- Rechter kolom: Output -->
+    <div class="right-column">
+      <app-output [outputText]="outputText" (finalized)="onTextFinalized()"></app-output>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+<!-- nieuw -->

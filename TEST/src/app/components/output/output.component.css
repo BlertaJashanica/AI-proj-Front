@@ -1,0 +1,11 @@
+textarea {
+    width: 100%;
+    resize: none;  /* Geen aanpassing van hoogte mogelijk */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    font-size: 16px;
+  }
+  

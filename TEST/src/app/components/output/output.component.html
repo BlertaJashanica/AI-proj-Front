@@ -1,11 +1,6 @@
-<div class="output-section">
-    <h3 class="output-title">Gegenereerde Tekst</h3>
-    <textarea 
-      class="output-text" 
-      [value]="outputText" 
-      rows="8" 
-      readonly>
-    </textarea>
-    <button class="finalize-btn" (click)="finalize()">Finaliseer Tekst</button>
+<div>
+    <h3>Gegenereerde Tekst</h3>
+    <textarea [value]="outputText || 'Nog geen tekst gegenereerd...'" rows="10" readonly></textarea>
+    <button (click)="finalizeText()">Finaliseer</button>
   </div>
   

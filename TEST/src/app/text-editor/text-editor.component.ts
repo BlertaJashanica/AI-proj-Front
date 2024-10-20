@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 import { TextInputComponent } from "../components/text-input/text-input.component";
 import { MediumSelectComponent } from "../components/medium-select/medium-select.component";
 import { OutputComponent } from "../components/output/output.component";
+import { EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-text-editor',
@@ -13,23 +15,21 @@ import { OutputComponent } from "../components/output/output.component";
 })
 export class TextEditorComponent {
   inputText: string = '';
-  outputText: string = '';
-  selectedMedium: string = 'Website';
-  media: string[] = ['Website', 'Poster', 'E-mail'];
+  selectedMedium: string = '';
 
-  generateText(): void {
-    if (this.inputText.trim()) {
-      this.outputText = `Gegenereerde tekst voor ${this.selectedMedium}: ${this.inputText}`;
-    } else {
-      alert('Voer eerst een geldige tekst in!');
-    }
+  @Output() textGenerated = new EventEmitter<string>();
+
+  onTextChanged(text: string) {
+    this.inputText = text;
   }
 
-  handleFinalize(): void {
-    this.inputText = '';
-    this.outputText = '';
-    this.selectedMedium = 'Website';
-    alert('De tekst is succesvol gefinaliseerd!');
+  onMediumSelected(medium: string) {
+    this.selectedMedium = medium;
+  }
+
+  generateText() {
+    const result = `Gegenereerde tekst voor ${this.selectedMedium}: ${this.inputText}`;
+    this.textGenerated.emit(result);
   }
 
 }

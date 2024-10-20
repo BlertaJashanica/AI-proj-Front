@@ -1,22 +1,14 @@
-<div class="container text-editor">
-    <h2 class="title">Slimme Schrijftool</h2>
-   
-    <app-text-input 
-      [(inputText)]="inputText">
-    </app-text-input>
+<div>
+    <h3>Voer je tekst in</h3>
+    <textarea [(ngModel)]="inputText" rows="15" style="width: 100%;"></textarea>
   
-    
-    <app-medium-select 
-      [(selectedMedium)]="selectedMedium" 
-      [media]="media">
-    </app-medium-select>
+    <label for="mediumSelect">Selecteer Medium:</label>
+    <select id="mediumSelect" [(ngModel)]="selectedMedium">
+      <option value="Blog">Blog</option>
+      <option value="Artikel">Artikel</option>
+      <option value="Rapport">Rapport</option>
+    </select>
   
-    <button class="generate-btn" (click)="generateText()">Genereer Tekst</button>
-  
-    <app-output 
-      *ngIf="outputText"
-      [outputText]="outputText" 
-      (finalized)="handleFinalize()">
-    </app-output>
+    <button (click)="generateText()">Genereer</button>
   </div>
   

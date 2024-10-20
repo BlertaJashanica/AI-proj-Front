@@ -13,5 +13,13 @@ import {TextEditorComponent} from './text-editor/text-editor.component'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = 'Slimme Schrijftool';
+  outputText: string = '';
+
+  onTextGenerated(text: string) {
+    this.outputText = text;
+  }
+
+  onTextFinalized() {
+    this.outputText = '';
+  }
 }
