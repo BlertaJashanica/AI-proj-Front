@@ -2,12 +2,14 @@ textarea {
     width: 100%;
     resize: vertical; /* Laat gebruiker de hoogte aanpassen */
     padding: 10px;
+    /* margin-top: 65px; */
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     background-color: #f8f9fa;
     font-size: 16px;
     min-height: 300px; /* Zelfde hoogte als input veld */
+   
   }
   
   button {
@@ -22,7 +24,11 @@ textarea {
     transition: background-color 0.3s; /* Animatie voor achtergrondkleur bij hover */
 }
 
-h3{
-    color: white;
-    font-size: 21px;
+h3 {
+  font-weight: normal;
+  font-size: 21px;
 }
+
+
+
+
